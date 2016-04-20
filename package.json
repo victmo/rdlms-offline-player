@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/victmo/offline-scorm-player.git"
-  }
+  },
   "main": "src/main.js",
   
   "scripts": {
