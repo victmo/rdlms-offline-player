@@ -4,9 +4,8 @@ Electro project to run RD SCORM material, offline.
 
 To add lessons:
 
-2. Copy your lesson(s) to the `src/courses/` folder.
-3. If `courses.js` doen't exist, create it by copying `src/courses.sample.js`.
-4. Add the required entries to `src/courses.js`.
+1. Copy your lesson(s) to the `src/courses/` folder.
+2. Add the required entries to `src/courses.js`.
 
 To test:
 
@@ -35,3 +34,8 @@ LMS.courses = [
 
 ];
 ```
+
+## Branding
+
+To change the aspect of the main window, just edit the files `src/branding/style.css`
+
