@@ -1,20 +1,19 @@
 {
-  "name": "offline-scorm-player",
+  "name": "rdlms-offline-player",
   "version": "1.0.0",
-  "description": "Reacción Digital Offline SCORM Player",
+  "description": "Reacción Digital LMS - Offline Player",
   "author": "Victor Márquez",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/victmo/offline-scorm-player.git"
+    "url": "git+https://github.com/victmo/rdlms-offline-player.git"
   },
   "main": "src/main.js",
   
   "scripts": {
     "start": "electron src/main.js",
-    "build-mac": "rm -rf dist/SCORM-Player-darwin* && electron-packager . SCORM-Player --out=dist --platform=darwin --arch=all --version=0.35.4 --ignore=dist",
-    "build-win": "rm -rf dist/SCORM-Player-win* && electron-packager . SCORM-Player --out=dist --platform=win32 --arch=all --version=0.35.4 --ignore=dist",
-    "package": "asar pack dist/SCORM-Player-darwin-x64/SCORM-Player.app/Contents/Resources/app app.asar"
+    "build-mac": "rm -rf dist/RD-darwin-x64 && electron-packager . RD --out=dist --platform=darwin --arch=x64 --version=0.37.6 --ignore=dist/RD* && asar pack dist/RD-darwin-x64/RD.app/Contents/Resources/app dist/RD-darwin-x64/RD.app/Contents/Resources/app.asar && rm -rf dist/RD-darwin-x64/RD.app/Contents/Resources/app",
+    "build-win": "rm -rf dist/RD-win32-ia32 && electron-packager . RD --out=dist --platform=win32 --arch=ia32 --version=0.37.6 --ignore=dist/RD* && asar pack dist/RD-win32-ia32/resources/app dist/RD-win32-ia32/resources/app.asar && rm -rf dist/RD-win32-ia32/resources/app"
   },
 
   "devDependencies": {
