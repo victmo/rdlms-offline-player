@@ -1,0 +1,13 @@
+.header {
+	background-color: #50C5B7;
+}
+.header .wrapper {
+	background-image: url(uxns.png);
+}
+.header .wrapper h1 {
+	color: #fff;
+	padding-left: 170px;
+}
+.header .wrapper h1:before {
+	content: "Unidos por Niños Saludables";
+}

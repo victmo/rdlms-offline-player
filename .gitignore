@@ -1,0 +1,62 @@
+# RD LMS Config
+_extra/
+dist/*
+node_modules/
+# src/courses.js
+src/courses/*
+
+
+# IDEs Specific
+sftp-config.json
+*.sublime-workspace
+*.pydevproject
+.metadata
+.gradle
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.externalToolBuilders/
+*.launch
+.cproject
+.buildpath
+.target
+.texlipse
+# General
+*.log
+#.htaccess
+.sass-cache
+# Mac Specific
+.DS_Store
+.AppleDouble
+.LSOverride
+# Icon must end with two \r
+Icon
+# Mac thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+# Windows folder config file
+Desktop.ini
+# Window Recycle Bin used on file shares
+$RECYCLE.BIN/
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp 

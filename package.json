@@ -1,0 +1,22 @@
+{
+  "name": "offline-scorm-player",
+  "version": "1.0.0",
+  "description": "Reacción Digital Offline SCORM Player",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron src/main.js",
+    "build-mac": "rm -rf dist/SCORM-Player-darwin* && electron-packager . SCORM-Player --out=dist --platform=darwin --arch=all --version=0.35.4 --ignore=dist",
+    "build-win": "rm -rf dist/SCORM-Player-win* && electron-packager . SCORM-Player --out=dist --platform=win32 --arch=all --version=0.35.4 --ignore=dist",
+    "package": "asar pack dist/SCORM-Player-darwin-x64/SCORM-Player.app/Contents/Resources/app app.asar"
+  },
+  "author": "Victor Márquez",
+  "license": "MIT",
+  "devDependencies": {
+    "asar": "^0.11.0",
+    "electron-packager": "^7.0.0",
+    "electron-prebuilt": "^0.37.6"
+  },
+  "dependencies": {
+    "jquery": "^2.2.3"
+  }
+}

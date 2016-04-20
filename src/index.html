@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Listado de cursos</title>
+	<style>
+		html {
+			font-size: 16px;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 1rem;
+			line-height: 1.5;
+			color: #373a3c;
+		}
+		.wrapper {
+			max-width: 960px;
+			padding: 0 40px;
+			margin: 0 auto;
+		}
+		.header {
+			background: #50C5B7;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		}
+		.header .wrapper {
+			background: transparent none no-repeat 40px 50%;
+			background-size: auto 100%;
+			height: 80px;
+		}
+		.header .wrapper h1 {
+			margin: 0;
+			padding: 0;
+			color: #fff;
+			font-weight: 400;
+			line-height: 80px;
+		}
+		.header .wrapper h1:before {
+			content: " ";
+		}
+		a {
+			color: #0275d8;
+			text-decoration: none;
+		}
+		a:hover {
+			color: #014c8c;
+			text-decoration: underline;
+			outline: 0;
+		}
+
+	</style>
+	<link rel="stylesheet" href="branding/style.css">
+	<script>if(!window.LMS) LMS = {};</script>
+	<script src="courses.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="wrapper">
+			<h1 id="title"></h1>
+		</div>
+	</div>
+	<div class="wrapper">
+		<h2>Lista de cursos</h2>
+		<p>Selecciona un curso de la lista para acceder a su contenido.</p>
+		<ul class="course-list"></ul>
+	</div>
+
+
+	
+	<script>
+		$ = require('jQuery');
+		var list = $('.course-list');
+		var c = null;
+		if(window.LMS && LMS.courses){
+			LMS.courses.forEach(function(course){
+				var item = $('<li><a href="#">' + course.name + '</a></li>');
+				item.on('click', function(e){
+					e.preventDefault();
+					c = window.open(
+						'courses/' + course.id + '/sco-contents/index.html', 
+						'sco',
+						'width=1024,height=768,resizable=no'
+					);
+					c.focus();
+				});
+				list.append(item);
+			});
+		}
+		
+	</script>
+</body>
+</html>
