@@ -15,7 +15,7 @@ To test:
 To build:
 
 - For Windows, run `npm run build-win`.
-- For Mac, run `npm run buld-mac`.
+- For Mac, run `npm run build-mac`.
 
 ## Example `src/courses.js`
 
