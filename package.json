@@ -13,7 +13,9 @@
   "scripts": {
     "start": "electron src/main.js",
     "build-mac": "rm -rf dist/RD-darwin-x64 && electron-packager . RD --out=dist --platform=darwin --arch=x64 --version=0.37.6 --ignore=dist/RD* && asar pack dist/RD-darwin-x64/RD.app/Contents/Resources/app dist/RD-darwin-x64/RD.app/Contents/Resources/app.asar && rm -rf dist/RD-darwin-x64/RD.app/Contents/Resources/app",
-    "build-win": "rm -rf dist/RD-win32-ia32 && electron-packager . RD --out=dist --platform=win32 --arch=ia32 --version=0.37.6 --ignore=dist/RD* && asar pack dist/RD-win32-ia32/resources/app dist/RD-win32-ia32/resources/app.asar && rm -rf dist/RD-win32-ia32/resources/app"
+    "build-win": "rm -rf dist/RD-win32-ia32 && electron-packager . RD --out=dist --platform=win32 --arch=ia32 --version=0.37.6 --ignore=dist/RD* && asar pack dist/RD-win32-ia32/resources/app dist/RD-win32-ia32/resources/app.asar && rm -rf dist/RD-win32-ia32/resources/app",
+    "build-mac-no-pkg": "rm -rf dist/RD-darwin-x64 && electron-packager . RD --out=dist --platform=darwin --arch=x64 --version=0.37.6 --ignore=dist/RD*",
+    "build-win-no-pkg": "rm -rf dist/RD-win32-ia32 && electron-packager . RD --out=dist --platform=win32 --arch=ia32 --version=0.37.6 --ignore=dist/RD*"
   },
 
   "devDependencies": {
